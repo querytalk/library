@@ -1,0 +1,712 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{94DEEBC8-4AB3-48B3-967D-5EE37B7B9738}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QueryTalk</RootNamespace>
+    <AssemblyName>QueryTalk</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <CodeContractsAssemblyMode>0</CodeContractsAssemblyMode>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeContractsEnableRuntimeChecking>False</CodeContractsEnableRuntimeChecking>
+    <CodeContractsRuntimeOnlyPublicSurface>False</CodeContractsRuntimeOnlyPublicSurface>
+    <CodeContractsRuntimeThrowOnFailure>True</CodeContractsRuntimeThrowOnFailure>
+    <CodeContractsRuntimeCallSiteRequires>False</CodeContractsRuntimeCallSiteRequires>
+    <CodeContractsRuntimeSkipQuantifiers>False</CodeContractsRuntimeSkipQuantifiers>
+    <CodeContractsRunCodeAnalysis>False</CodeContractsRunCodeAnalysis>
+    <CodeContractsNonNullObligations>False</CodeContractsNonNullObligations>
+    <CodeContractsBoundsObligations>False</CodeContractsBoundsObligations>
+    <CodeContractsArithmeticObligations>False</CodeContractsArithmeticObligations>
+    <CodeContractsEnumObligations>False</CodeContractsEnumObligations>
+    <CodeContractsRedundantAssumptions>False</CodeContractsRedundantAssumptions>
+    <CodeContractsInferRequires>False</CodeContractsInferRequires>
+    <CodeContractsInferEnsures>False</CodeContractsInferEnsures>
+    <CodeContractsInferObjectInvariants>False</CodeContractsInferObjectInvariants>
+    <CodeContractsSuggestAssumptions>False</CodeContractsSuggestAssumptions>
+    <CodeContractsSuggestRequires>True</CodeContractsSuggestRequires>
+    <CodeContractsSuggestEnsures>False</CodeContractsSuggestEnsures>
+    <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
+    <CodeContractsDisjunctiveRequires>False</CodeContractsDisjunctiveRequires>
+    <CodeContractsRunInBackground>True</CodeContractsRunInBackground>
+    <CodeContractsShowSquigglies>True</CodeContractsShowSquigglies>
+    <CodeContractsUseBaseLine>False</CodeContractsUseBaseLine>
+    <CodeContractsEmitXMLDocs>False</CodeContractsEmitXMLDocs>
+    <CodeContractsCustomRewriterAssembly />
+    <CodeContractsCustomRewriterClass />
+    <CodeContractsLibPaths />
+    <CodeContractsExtraRewriteOptions />
+    <CodeContractsExtraAnalysisOptions />
+    <CodeContractsBaseLineFile />
+    <CodeContractsCacheAnalysisResults>False</CodeContractsCacheAnalysisResults>
+    <CodeContractsRuntimeCheckingLevel>Full</CodeContractsRuntimeCheckingLevel>
+    <CodeContractsReferenceAssembly>Build</CodeContractsReferenceAssembly>
+    <CodeContractsAnalysisWarningLevel>2</CodeContractsAnalysisWarningLevel>
+    <DocumentationFile>bin\QueryTalk.XML</DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>..\bin\QueryTalk.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>
+    </CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="designer\InsertCascadeGo.cs" />
+    <Compile Include="designer\As.cs" />
+    <Compile Include="designer\Value.cs" />
+    <Compile Include="designer\Converters.cs" />
+    <Compile Include="designer\Quantifiers.cs" />
+    <Compile Include="designer\Case.cs" />
+    <Compile Include="designer\Return.cs" />
+    <Compile Include="designer\Collect.cs" />
+    <Compile Include="designer\From.cs" />
+    <Compile Include="designer\OutputTable.cs" />
+    <Compile Include="designer\ConnectBy.cs" />
+    <Compile Include="designer\Go.cs" />
+    <Compile Include="designer\ExecGo.cs" />
+    <Compile Include="designer\ReloadGo.cs" />
+    <Compile Include="designer\DeleteGo.cs" />
+    <Compile Include="designer\InsertGo.cs" />
+    <Compile Include="designer\UpdateGo.cs" />
+    <Compile Include="designer\DeleteCascadeGo.cs" />
+    <Compile Include="designer\BulkInsertGo.cs" />
+    <Compile Include="designer\Rows.cs" />
+    <Compile Include="designer\Param.cs" />
+    <Compile Include="designer\SetTestingEnvironment.cs" />
+    <Compile Include="designer\SetConnection.cs" />
+    <Compile Include="enums\AsyncStatus.cs" />
+    <Compile Include="d.cs" />
+    <Compile Include="extensions\executing\Extensions_Output.cs" />
+    <Compile Include="extensions\other\Extensions_AsyncStatus.cs" />
+    <Compile Include="enums\TestingOption.cs" />
+    <Compile Include="ResultT2-9.cs" />
+    <Compile Include="ResultT.cs" />
+    <Compile Include="RowT1-5.cs" />
+    <Compile Include="RowT1-4.cs" />
+    <Compile Include="RowT1-3.cs" />
+    <Compile Include="RowT1-2.cs" />
+    <Compile Include="RowT1.cs" />
+    <Compile Include="Wall\Api.cs" />
+    <Compile Include="ConnectionKey.cs" />
+    <Compile Include="connection\ConnectionData.cs" />
+    <Compile Include="connection\ConnectionManager.cs" />
+    <Compile Include="extensions\Extensions_SemqToSql.cs" />
+    <Compile Include="extensions\Extensions_Collect.cs" />
+    <Compile Include="extensions\Extensions_SemqJoin.cs" />
+    <Compile Include="extensions\Extensions_Output.cs" />
+    <Compile Include="Wall\chainers\CollectChainer.cs" />
+    <Compile Include="Wall\chainers\JoinGraphChainer.cs" />
+    <Compile Include="Wall\chainers\JoinChainer.cs" />
+    <Compile Include="Wall\chainers\SemqJoinChainer.cs" />
+    <Compile Include="Wall\chainers\WriteChainer.cs" />
+    <Compile Include="Wall\common\AliasColumnPair.cs" />
+    <Compile Include="Wall\converters\class\ClassConverter.cs" />
+    <Compile Include="Wall\converters\json\JsonProperty.cs" />
+    <Compile Include="Wall\converters\json\JsonConverter_Result.cs" />
+    <Compile Include="Wall\converters\json\JsonConverter_Collection.cs" />
+    <Compile Include="Wall\converters\json\JsonConverter_Scalar.cs" />
+    <Compile Include="Wall\converters\json\JsonConverter_Value.cs" />
+    <Compile Include="Wall\converters\json\JsonConverter_Class.cs" />
+    <Compile Include="Wall\converters\json\JsonConverter_DataTable.cs" />
+    <Compile Include="Wall\converters\view\ViewConverter_Scalar.cs" />
+    <Compile Include="Wall\converters\view\ViewConverter_Collection.cs" />
+    <Compile Include="Wall\converters\view\ViewConverter_DbRow.cs" />
+    <Compile Include="Wall\converters\view\ViewConverter_DataTable.cs" />
+    <Compile Include="Wall\converters\view\ViewConverter_Value.cs" />
+    <Compile Include="Wall\enums\CollectionType.cs" />
+    <Compile Include="Wall\converters\json\JsonConverter.cs" />
+    <Compile Include="Wall\common\Naming.cs" />
+    <Compile Include="Wall\enums\JoinCorrelation.cs" />
+    <Compile Include="Wall\enums\ByType.cs" />
+    <Compile Include="Wall\common\PublicInvoker.cs" />
+    <Compile Include="Wall\common\Comparers.cs" />
+    <Compile Include="enums\OutputTable.cs" />
+    <Compile Include="Wall\debugger\ArgumentDebuggerProxy.cs" />
+    <Compile Include="Wall\debugger\DbColumnDebuggerProxy.cs" />
+    <Compile Include="Wall\debugger\ValueDebuggerProxy.cs" />
+    <Compile Include="Wall\debugger\DebuggerInfo.cs" />
+    <Compile Include="Wall\debugger\SnippetDebuggerProxy.cs" />
+    <Compile Include="Wall\debugger\ViewDebuggerProxy.cs" />
+    <Compile Include="Wall\debugger\ProcedureDebuggerProxy.cs" />
+    <Compile Include="Wall\debugger\DynamicSetDebuggerProxy.cs" />
+    <Compile Include="Wall\debugger\ProxyDynamicSet.cs" />
+    <Compile Include="Wall\debugger\ResultDebuggerProxy.cs" />
+    <Compile Include="Wall\debugger\SetDebuggerProxy.cs" />
+    <Compile Include="Wall\executing\Reader_Go.cs" />
+    <Compile Include="Wall\interfaces\case\ICaseInput.cs" />
+    <Compile Include="Wall\interfaces\common\IDesignerRoot.cs" />
+    <Compile Include="Wall\interfaces\common\ISemqToSql.cs" />
+    <Compile Include="Wall\interfaces\common\IConnectable.cs" />
+    <Compile Include="Wall\interfaces\common\IStatement.cs" />
+    <Compile Include="Wall\common\ConnectBy.cs" />
+    <Compile Include="Wall\interfaces\case\ICase.cs" />
+    <Compile Include="Wall\interfaces\ISemqJoin.cs" />
+    <Compile Include="Wall\mapping\Mapping_Builders.cs" />
+    <Compile Include="Wall\mapping\Mapping_Checking.cs" />
+    <Compile Include="Wall\mapping\Mapping_SetTableParamMapping.cs" />
+    <Compile Include="Wall\mapping\Mapping_SetInlineMapping.cs" />
+    <Compile Include="Wall\mapping\Mapping_SetClrMapping.cs" />
+    <Compile Include="Wall\mapping\Mapping_SetSqlMapping.cs" />
+    <Compile Include="Wall\mapping\Mapping.cs" />
+    <Compile Include="Wall\semq\db\DbColumns.cs" />
+    <Compile Include="Wall\enums\PredicateGroupType.cs" />
+    <Compile Include="Wall\semq\crud\InsertCascadeGo.cs" />
+    <Compile Include="Wall\semq\crud\DeleteRowsGo.cs" />
+    <Compile Include="Wall\semq\crud\Crud.cs" />
+    <Compile Include="Wall\semq\crud\InsertRowsGo.cs" />
+    <Compile Include="Wall\semq\crud\DeleteCascadeGo.cs" />
+    <Compile Include="Wall\semq\crud\UpdateRowsGo.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_ExistsGo.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_CRUD.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_NewPack.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_By.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_Columns.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_Count.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_DbRowStatus.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_Testing.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_WhereUpdatable.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_End.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_Maximized.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_Whose.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_BelongingTo.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_WhichHas.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_RelatedTo.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_Block.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_Synonym.cs" />
+    <Compile Include="Wall\semq\interfaces\IRow.cs" />
+    <Compile Include="Wall\semq\interfaces\INode.cs" />
+    <Compile Include="Wall\enums\ColumnType.cs" />
+    <Compile Include="Wall\semq\crud\InsertGo.cs" />
+    <Compile Include="Wall\enums\ColumnSelector.cs" />
+    <Compile Include="Wall\enums\Parameterization.cs" />
+    <Compile Include="Wall\interfaces\common\INonPredecessor.cs" />
+    <Compile Include="Wall\semq\crud\ReloadGo.cs" />
+    <Compile Include="Wall\semq\CrudProcedure.cs" />
+    <Compile Include="Wall\enums\NodeMethod.cs" />
+    <Compile Include="Wall\semq\NodeTree.cs" />
+    <Compile Include="Wall\core\DbGraphBase.cs" />
+    <Compile Include="Wall\chainers\ThenCollectChainer.cs" />
+    <Compile Include="Wall\chainers\ColumnsChainer.cs" />
+    <Compile Include="Wall\chainers\OutputIntoChainer.cs" />
+    <Compile Include="Wall\chainers\OutputChainer.cs" />
+    <Compile Include="Wall\common\NullChecker.cs" />
+    <Compile Include="Wall\common\UpperCase.cs" />
+    <Compile Include="Wall\converters\view\ViewConverter.cs" />
+    <Compile Include="Wall\common\ViewColumnInfo.cs" />
+    <Compile Include="Wall\interfaces\common\IStringAsValue.cs" />
+    <Compile Include="Wall\interfaces\common\IWritable.cs" />
+    <Compile Include="Wall\interfaces\common\ISelectable.cs" />
+    <Compile Include="Wall\interfaces\common\IColumnName.cs" />
+    <Compile Include="Wall\interfaces\ICollect.cs" />
+    <Compile Include="Wall\interfaces\IThenCollect.cs" />
+    <Compile Include="Wall\interfaces\IColumns.cs" />
+    <Compile Include="Wall\interfaces\IOutput.cs" />
+    <Compile Include="Wall\semq\crud\UpdateGo.cs" />
+    <Compile Include="Wall\semq\crud\DeleteGo.cs" />
+    <Compile Include="enums\DbRowStatus.cs" />
+    <Compile Include="Wall\semq\interfaces\IGraph.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions.cs" />
+    <Compile Include="extensions\Extensions_IfExists.cs" />
+    <Compile Include="Wall\semq\Quantifier.cs" />
+    <Compile Include="Wall\enums\QuantifierType.cs" />
+    <Compile Include="arguments\ValueScalarArgument.cs" />
+    <Compile Include="Wall\interfaces\common\IProcedure.cs" />
+    <Compile Include="Wall\semq\extensions\DbExtensions_Graph.cs" />
+    <Compile Include="Wall\semq\db\DbGraph.cs" />
+    <Compile Include="Wall\semq\map\GraphInvoker.cs" />
+    <Compile Include="Wall\enums\ExpressionGroupType.cs" />
+    <Compile Include="Wall\semq\interfaces\ITable.cs" />
+    <Compile Include="Wall\semq\interfaces\IView.cs" />
+    <Compile Include="Wall\semq\PredicateGroup.cs" />
+    <Compile Include="Wall\enums\MaximizationType.cs" />
+    <Compile Include="Wall\semq\interfaces\IRelation.cs" />
+    <Compile Include="Wall\semq\Joiner.cs" />
+    <Compile Include="Wall\core\InternalNode.cs" />
+    <Compile Include="Wall\core\DB3.cs" />
+    <Compile Include="Wall\semq\map\NodeInvoker.cs" />
+    <Compile Include="Wall\semq\map\OrderedLink.cs" />
+    <Compile Include="Wall\semq\map\DatabaseMap.cs" />
+    <Compile Include="Wall\semq\map\Link.cs" />
+    <Compile Include="Wall\semq\map\Map.cs" />
+    <Compile Include="Wall\semq\GraphPair.cs" />
+    <Compile Include="Wall\enums\CrudProcedureType.cs" />
+    <Compile Include="Wall\semq\interfaces\IPredicate.cs" />
+    <Compile Include="Wall\semq\map\Relation.cs" />
+    <Compile Include="Wall\enums\PredicateType.cs" />
+    <Compile Include="Wall\semq\interfaces\IFunction.cs" />
+    <Compile Include="Wall\semq\interfaces\ISemantic.cs" />
+    <Compile Include="Wall\enums\LogicalOperator.cs" />
+    <Compile Include="Wall\core\Mapper.cs" />
+    <Compile Include="Result.cs" />
+    <Compile Include="arguments\ExecArgument.cs" />
+    <Compile Include="Wall\core\DT.cs" />
+    <Compile Include="Wall\chainers\as\AsChainer.cs" />
+    <Compile Include="Wall\common\Query.cs" />
+    <Compile Include="Wall\common\OutputVar.cs" />
+    <Compile Include="Wall\common\Parameterize.cs" />
+    <Compile Include="Wall\build\BuildContext.cs" />
+    <Compile Include="Wall\common\QueryPart.cs" />
+    <Compile Include="Wall\interfaces\common\ITableAlias.cs" />
+    <Compile Include="Wall\interfaces\common\IOpenView.cs" />
+    <Compile Include="Wall\interfaces\common\INonSelectView.cs" />
+    <Compile Include="Wall\interfaces\common\IQuery.cs" />
+    <Compile Include="Wall\interfaces\common\IJoinCond.cs" />
+    <Compile Include="Wall\interfaces\IUpdate.cs" />
+    <Compile Include="Wall\interfaces\IInsert.cs" />
+    <Compile Include="Wall\interfaces\IDelete.cs" />
+    <Compile Include="Wall\interfaces\IFrom.cs" />
+    <Compile Include="Wall\interfaces\ISelect.cs" />
+    <Compile Include="Wall\interfaces\executing\ICompilable.cs" />
+    <Compile Include="Wall\interfaces\executing\IAsync.cs" />
+    <Compile Include="Wall\interfaces\executing\IAsyncStatus.cs" />
+    <Compile Include="Wall\interfaces\executing\IResult.cs" />
+    <Compile Include="extensions\Extensions_Or.cs" />
+    <Compile Include="extensions\executing\Extensions_GoAsync.cs" />
+    <Compile Include="extensions\Extensions_And.cs" />
+    <Compile Include="extensions\Extensions_Comment.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Wall\global\Admin.cs" />
+    <Compile Include="Wall\common\Concatenator.cs" />
+    <Compile Include="extensions\Extensions_CLR.cs" />
+    <Compile Include="extensions\executing\Extensions_Test.cs" />
+    <Compile Include="extensions\Extensions_PivotUnpivot.cs" />
+    <Compile Include="Snippet.cs" />
+    <Compile Include="extensions\executing\Extensions_ConnectBy.cs" />
+    <Compile Include="extensions\executing\Extensions_Go.cs" />
+    <Compile Include="extensions\Extensions_BeginCursor.cs" />
+    <Compile Include="extensions\Extensions_Into.cs" />
+    <Compile Include="extensions\Extensions_Collate.cs" />
+    <Compile Include="extensions\Extensions_BeginTable.cs" />
+    <Compile Include="extensions\Extensions_Transaction.cs" />
+    <Compile Include="extensions\Extensions_Raiserror.cs" />
+    <Compile Include="extensions\Extensions_TryCatch.cs" />
+    <Compile Include="extensions\Extensions_While.cs" />
+    <Compile Include="extensions\Extensions_If.cs" />
+    <Compile Include="extensions\Extensions_LabelAndGoto.cs" />
+    <Compile Include="extensions\Extensions_SetVariable.cs" />
+    <Compile Include="extensions\Extensions_Declare.cs" />
+    <Compile Include="extensions\Extensions_FromMany.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="designer\IndexType.cs" />
+    <Compile Include="extensions\other\Extensions_InputOutput.cs" />
+    <Compile Include="designer\DataTypes.cs" />
+    <Compile Include="arguments\DeclareArgument.cs" />
+    <Compile Include="arguments\ByArgument.cs" />
+    <Compile Include="arguments\TableArgument.cs" />
+    <Compile Include="Wall\core\Argument.cs" />
+    <Compile Include="arguments\OrderedColumnArgument.cs" />
+    <Compile Include="arguments\NonSelectColumnArgument.cs" />
+    <Compile Include="arguments\VariableArgument.cs" />
+    <Compile Include="Wall\chainers\as\PivotAsChainer.cs" />
+    <Compile Include="Wall\chainers\CollateChainer.cs" />
+    <Compile Include="Wall\chainers\ConditionChainer.cs" />
+    <Compile Include="Wall\chainers\CommentChainer.cs" />
+    <Compile Include="Wall\chainers\NonTranChainer.cs" />
+    <Compile Include="Wall\chainers\WhereOrChainer.cs" />
+    <Compile Include="Wall\chainers\OnOrChainer.cs" />
+    <Compile Include="Wall\chainers\OnAnd.cs" />
+    <Compile Include="Wall\chainers\WhereAndChainer.cs" />
+    <Compile Include="Wall\chainers\PivotChainer.cs" />
+    <Compile Include="Wall\chainers\cursor\BeginCursorChainer.cs" />
+    <Compile Include="Wall\chainers\cursor\BeginCursorIntoVarsChainer.cs" />
+    <Compile Include="Wall\chainers\cursor\BeginCursorFetchNextChainer.cs" />
+    <Compile Include="Wall\chainers\cursor\EndCursorChainer.cs" />
+    <Compile Include="Wall\chainers\IntoTempTableChainer.cs" />
+    <Compile Include="Wall\chainers\param\TableParamChainer.cs" />
+    <Compile Include="Wall\chainers\ranking\EndRankingChainer.cs" />
+    <Compile Include="Wall\chainers\table\BeginTableColumnCheckChainer.cs" />
+    <Compile Include="Wall\chainers\table\BeginTableColumnNullableChainer.cs" />
+    <Compile Include="Wall\chainers\table\BeginTableColumnDefaultChainer.cs" />
+    <Compile Include="Wall\chainers\table\BeginTablePrimaryKeyChainer.cs" />
+    <Compile Include="Wall\chainers\table\BeginTableUniqueKeyChainer.cs" />
+    <Compile Include="Wall\chainers\table\DropTempTableChainer.cs" />
+    <Compile Include="Wall\chainers\table\DropTempTableIndexChainer.cs" />
+    <Compile Include="Wall\chainers\table\CreateTempTableIndexColumnsChainer.cs" />
+    <Compile Include="Wall\build\BuildArgs.cs" />
+    <Compile Include="Wall\common\Extensions.cs" />
+    <Compile Include="Wall\common\PropertyAccessor.cs" />
+    <Compile Include="Wall\common\Text.cs" />
+    <Compile Include="Wall\enums\TakeProperty.cs" />
+    <Compile Include="Wall\executing\Importer.cs" />
+    <Compile Include="Wall\interfaces\common\IStoredProc.cs" />
+    <Compile Include="Wall\interfaces\common\INonParameterizable.cs" />
+    <Compile Include="Wall\interfaces\common\ISnippetDisallowed.cs" />
+    <Compile Include="Wall\interfaces\INonTran.cs" />
+    <Compile Include="Wall\interfaces\IWhereOr.cs" />
+    <Compile Include="Wall\interfaces\IOnOr.cs" />
+    <Compile Include="Wall\interfaces\executing\IGo.cs" />
+    <Compile Include="Wall\interfaces\IOnAnd.cs" />
+    <Compile Include="Wall\interfaces\IWhereAnd.cs" />
+    <Compile Include="Wall\interfaces\IByVariables.cs" />
+    <Compile Include="Wall\interfaces\IDeclareSet.cs" />
+    <Compile Include="Wall\interfaces\cursor\IBeginCursorAs.cs" />
+    <Compile Include="Wall\interfaces\cursor\IBeginCursorWithVariables.cs" />
+    <Compile Include="Wall\interfaces\IIntoTempTable.cs" />
+    <Compile Include="Wall\interfaces\pivot-unpivot\IPivotAs.cs" />
+    <Compile Include="Wall\interfaces\pivot-unpivot\IPivotColumns.cs" />
+    <Compile Include="Wall\interfaces\pivot-unpivot\IPivotTarget.cs" />
+    <Compile Include="Wall\interfaces\pivot-unpivot\IPivot.cs" />
+    <Compile Include="Wall\interfaces\table\ITempTableIndexColumns.cs" />
+    <Compile Include="Wall\interfaces\table\IBeginTableUniqueKey.cs" />
+    <Compile Include="Wall\interfaces\table\IBeginTablePrimaryKey.cs" />
+    <Compile Include="designer\SysFn\Fn_Transaction.cs" />
+    <Compile Include="Wall\chainers\table\TruncateTableChainer.cs" />
+    <Compile Include="Wall\chainers\table\CreateTempTableIndexChainer.cs" />
+    <Compile Include="Wall\chainers\table\EndTableChainer.cs" />
+    <Compile Include="Wall\chainers\table\BeginTableColumnIdentityChainer.cs" />
+    <Compile Include="Wall\chainers\table\BeginTableColumnChainer.cs" />
+    <Compile Include="Wall\chainers\table\BeginTableChainer.cs" />
+    <Compile Include="Wall\chainers\set\SetIdentityInsertChainer.cs" />
+    <Compile Include="Wall\chainers\try-catch\CatchChainer.cs" />
+    <Compile Include="Wall\chainers\try-catch\EndTryCatchChainer.cs" />
+    <Compile Include="Wall\chainers\try-catch\TryChainer.cs" />
+    <Compile Include="Wall\chainers\ConvertChainer.cs" />
+    <Compile Include="Wall\chainers\transaction\BeginTransactionChainer.cs" />
+    <Compile Include="Wall\chainers\transaction\CommitTransactionChainer.cs" />
+    <Compile Include="Wall\chainers\transaction\SaveTransactionChainer.cs" />
+    <Compile Include="Wall\chainers\transaction\RollbackTransactionChainer.cs" />
+    <Compile Include="Wall\chainers\set\SetIsolationLevelChainer.cs" />
+    <Compile Include="Wall\chainers\GotoChainer.cs" />
+    <Compile Include="Wall\chainers\RaiserrorChainer.cs" />
+    <Compile Include="Wall\chainers\if\ElseChainer.cs" />
+    <Compile Include="Wall\chainers\if\ElseIfChainer.cs" />
+    <Compile Include="Wall\chainers\if\EndIfChainer.cs" />
+    <Compile Include="Wall\chainers\if\IfChainer.cs" />
+    <Compile Include="Wall\chainers\LabelChainer.cs" />
+    <Compile Include="Wall\chainers\IntoVarsChainer.cs" />
+    <Compile Include="Wall\chainers\DeclareChainer.cs" />
+    <Compile Include="Wall\chainers\SetChainer.cs" />
+    <Compile Include="Wall\chainers\FromManyChainer.cs" />
+    <Compile Include="Wall\chainers\while\BreakChainer.cs" />
+    <Compile Include="Wall\chainers\while\ContinueChainer.cs" />
+    <Compile Include="Wall\chainers\while\EndWhileChainer.cs" />
+    <Compile Include="Wall\chainers\while\WhileChainer.cs" />
+    <Compile Include="Wall\enums\BeginTableType.cs" />
+    <Compile Include="Wall\common\TableIdentity.cs" />
+    <Compile Include="Wall\core\DataType.cs" />
+    <Compile Include="Wall\enums\IdentifierValidity.cs" />
+    <Compile Include="Wall\interfaces\table\IEndTable.cs" />
+    <Compile Include="Wall\interfaces\table\IBeginTableColumn.cs" />
+    <Compile Include="Wall\interfaces\IAny.cs" />
+    <Compile Include="Wall\interfaces\IConvertWithStyle.cs" />
+    <Compile Include="Wall\interfaces\IIntoVars.cs" />
+    <Compile Include="Wall\core\SqlBatch.cs" />
+    <Compile Include="Wall\core\InternalRoot.cs" />
+    <Compile Include="Wall\chainers\PassChainer.cs" />
+    <Compile Include="Wall\interfaces\executing\IPass.cs" />
+    <Compile Include="extensions\Extensions_By.cs" />
+    <Compile Include="extensions\Extensions_Return.cs" />
+    <Compile Include="Wall\chainers\ByChainer.cs" />
+    <Compile Include="Wall\chainers\ReturnChainer.cs" />
+    <Compile Include="Wall\common\ArrayEqualityComparer.cs" />
+    <Compile Include="Wall\executing\Reader_LoadAll.cs" />
+    <Compile Include="Async.cs" />
+    <Compile Include="extensions\Extensions_Exec.cs" />
+    <Compile Include="Wall\attributes\ExceptionAttribute.cs" />
+    <Compile Include="Wall\chainers\param\DataParamChainer.cs" />
+    <Compile Include="Wall\chainers\param\InlineParamChainer.cs" />
+    <Compile Include="Wall\chainers\param\ParamOutputChainer.cs" />
+    <Compile Include="Wall\chainers\param\ParamNotNullChainer.cs" />
+    <Compile Include="Wall\chainers\param\ParamOptionalChainer.cs" />
+    <Compile Include="Wall\chainers\ExecChainer.cs" />
+    <Compile Include="Wall\chainers\NameChainer.cs" />
+    <Compile Include="Wall\chainers\case\CaseChainer.cs" />
+    <Compile Include="Wall\core\SysFn.cs" />
+    <Compile Include="Wall\global\Cache.cs" />
+    <Compile Include="Wall\core\Connectable.cs" />
+    <Compile Include="Wall\executing\Loader.cs" />
+    <Compile Include="Wall\executing\Reader_LoadMany.cs" />
+    <Compile Include="Wall\executing\Reader_LoadTable.cs" />
+    <Compile Include="Wall\executing\Reader_LoadDataTable.cs" />
+    <Compile Include="Wall\executing\Reader.cs" />
+    <Compile Include="ResultSet.cs" />
+    <Compile Include="extensions\executing\Extensions_Pass.cs" />
+    <Compile Include="arguments\ParameterArgument.cs" />
+    <Compile Include="Wall\core\Executable.cs" />
+    <Compile Include="Wall\core\Compilable.cs" />
+    <Compile Include="Wall\interfaces\common\IExecutable.cs" />
+    <Compile Include="Wall\interfaces\IParamOutput.cs" />
+    <Compile Include="Wall\interfaces\IParamNotNull.cs" />
+    <Compile Include="Wall\interfaces\IParamOptional.cs" />
+    <Compile Include="Wall\chainers\case\CaseExpressionChainer.cs" />
+    <Compile Include="Wall\semq\map\ColumnMap.cs" />
+    <Compile Include="Wall\semq\Predicate.cs" />
+    <Compile Include="Wall\semq\map\ParamMap.cs" />
+    <Compile Include="Wall\core\DbNode.cs" />
+    <Compile Include="Wall\semq\SemqContext.cs" />
+    <Compile Include="Wall\core\DbRow.cs" />
+    <Compile Include="Wall\semq\SubResult.cs" />
+    <Compile Include="Wall\semq\translate\Translate.cs" />
+    <Compile Include="Wall\semq\db\DbColumn.cs" />
+    <Compile Include="Wall\semq\db\DbMapping.cs" />
+    <Compile Include="Wall\semq\db\DbProcedure.cs" />
+    <Compile Include="Wall\semq\db\DbScalarFunc.cs" />
+    <Compile Include="Wall\semq\db\DbTable.cs" />
+    <Compile Include="Wall\semq\db\DbTableFunc.cs" />
+    <Compile Include="Wall\mapping\SqlMappingInfo.cs" />
+    <Compile Include="Row.cs" />
+    <Compile Include="designer\IsolationLevel.cs" />
+    <Compile Include="designer\SysFn\Fn_Error.cs" />
+    <Compile Include="designer\QuoteCharacter.cs" />
+    <Compile Include="designer\DatePart.cs" />
+    <Compile Include="designer\SysFn\Fn_Security.cs" />
+    <Compile Include="designer\SysFn\Fn_String.cs" />
+    <Compile Include="designer\SysFn\Fn_Variables.cs" />
+    <Compile Include="designer\Inliner.cs" />
+    <Compile Include="designer\ToIdentifier.cs" />
+    <Compile Include="Wall\enums\IdentifierType.cs" />
+    <Compile Include="extensions\Extensions_Inject.cs" />
+    <Compile Include="Wall\chainers\InjectChainer.cs" />
+    <Compile Include="Wall\chainers\TableChainer.cs" />
+    <Compile Include="Wall\common\Statement.cs" />
+    <Compile Include="Wall\interfaces\common\IBegin.cs" />
+    <Compile Include="Wall\interfaces\executing\IConnectBy.cs" />
+    <Compile Include="arguments\OrderingArgument.cs" />
+    <Compile Include="arguments\GroupingArgument.cs" />
+    <Compile Include="arguments\FunctionArgument.cs" />
+    <Compile Include="arguments\Table.cs" />
+    <Compile Include="arguments\AggregateArgument.cs" />
+    <Compile Include="arguments\NumericArgument.cs" />
+    <Compile Include="arguments\ScalarArgument.cs" />
+    <Compile Include="Column.cs" />
+    <Compile Include="extensions\other\Extensions_Cast.cs" />
+    <Compile Include="Wall\mapping\ClrMappingInfo.cs" />
+    <Compile Include="Wall\semq\map\NodeMap.cs" />
+    <Compile Include="Wall\semq\translate\TranslateGraph.cs" />
+    <Compile Include="extensions\Extensions_Param.cs" />
+    <Compile Include="Wall\chainers\param\ParamChainer.cs" />
+    <Compile Include="Wall\chainers\EndChainer.cs" />
+    <Compile Include="Procedure.cs" />
+    <Compile Include="designer\SysFn\Fn_Datetime.cs" />
+    <Compile Include="Wall\enums\SortOrder.cs" />
+    <Compile Include="QueryTalkException.cs" />
+    <Compile Include="enums\QueryTalkExceptionType.cs" />
+    <Compile Include="Wall\chainers\as\ColumnAsChainer.cs" />
+    <Compile Include="Wall\chainers\as\ViewAsChainer.cs" />
+    <Compile Include="Wall\chainers\case\CaseValueChainer.cs" />
+    <Compile Include="Wall\chainers\OrderedChainer.cs" />
+    <Compile Include="Wall\chainers\WithCubeChainer.cs" />
+    <Compile Include="Wall\interfaces\common\IViewAllowed.cs" />
+    <Compile Include="Wall\interfaces\common\IName.cs" />
+    <Compile Include="Wall\interfaces\IParam.cs" />
+    <Compile Include="Wall\interfaces\IEndProc.cs" />
+    <Compile Include="Wall\interfaces\IAs.cs" />
+    <Compile Include="Wall\interfaces\common\IScalar.cs" />
+    <Compile Include="extensions\Extensions_WithCube.cs" />
+    <Compile Include="extensions\expressions\Extensions_ExprIn.cs" />
+    <Compile Include="extensions\expressions\Extensions_ExprMath.cs" />
+    <Compile Include="extensions\expressions\Extensions_ExprBetween.cs" />
+    <Compile Include="extensions\expressions\Extensions_ExprLike.cs" />
+    <Compile Include="extensions\expressions\Extensions_ExprLessThan.cs" />
+    <Compile Include="extensions\expressions\Extensions_ExprGreaterThan.cs" />
+    <Compile Include="Wall\interfaces\IWithCube.cs" />
+    <Compile Include="Wall\chainers\OuterApplyChainer.cs" />
+    <Compile Include="Wall\chainers\CrossApplyChainer.cs" />
+    <Compile Include="Wall\chainers\ranking\RankingNTileChainer.cs" />
+    <Compile Include="Wall\chainers\ranking\RankingDenseRankChainer.cs" />
+    <Compile Include="Wall\chainers\ranking\RankingRankChainer.cs" />
+    <Compile Include="Wall\chainers\ranking\RankingPartitionByChainer.cs" />
+    <Compile Include="Wall\testing\Testing.cs" />
+    <Compile Include="Wall\testing\TestingFormNoTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wall\testing\TestingFormNoTable.Designer.cs">
+      <DependentUpon>TestingFormNoTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wall\testing\TestingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wall\testing\TestingForm.Designer.cs">
+      <DependentUpon>TestingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wall\chainers\ranking\RankingOrderByChainer.cs" />
+    <Compile Include="Wall\chainers\ranking\RankingRowNumberChainer.cs" />
+    <Compile Include="Wall\chainers\ranking\RankingChainer.cs" />
+    <Compile Include="Wall\chainers\case\CaseElseChainer.cs" />
+    <Compile Include="Wall\chainers\case\CaseThenChainer.cs" />
+    <Compile Include="Wall\chainers\case\CaseWhenChainer.cs" />
+    <Compile Include="Wall\interfaces\IOuterApply.cs" />
+    <Compile Include="Wall\interfaces\ICrossApply.cs" />
+    <Compile Include="designer\SysFn\Fn_Conversions.cs" />
+    <Compile Include="designer\SysFn\Fn_Math.cs" />
+    <Compile Include="designer\SysFn\Fn_Other.cs" />
+    <Compile Include="designer\SysFn\Fn_Ranking.cs" />
+    <Compile Include="designer\SysFn\Fn_Aggregate.cs" />
+    <Compile Include="Wall\core\Udf.cs" />
+    <Compile Include="extensions\Extensions_Udf.cs" />
+    <Compile Include="Wall\chainers\OfChainer.cs" />
+    <Compile Include="Expression.cs" />
+    <Compile Include="extensions\Extensions_Ranking.cs" />
+    <Compile Include="extensions\Extensions_Case.cs" />
+    <Compile Include="extensions\expressions\Extensions_ExprUnary.cs" />
+    <Compile Include="extensions\expressions\Extensions_ExprEqualTo.cs" />
+    <Compile Include="extensions\Extensions_Of.cs" />
+    <Compile Include="Wall\interfaces\case\ICaseElse.cs" />
+    <Compile Include="Wall\interfaces\case\IEndCase.cs" />
+    <Compile Include="Wall\interfaces\case\ICaseThen.cs" />
+    <Compile Include="Wall\interfaces\case\ICaseWhen.cs" />
+    <Compile Include="Wall\interfaces\ranking\IRankingPartitionBy.cs" />
+    <Compile Include="Wall\interfaces\ranking\IRankingOrderBy.cs" />
+    <Compile Include="Wall\interfaces\ranking\IEndRanking.cs" />
+    <Compile Include="designer\Null.cs" />
+    <Compile Include="Identifier.cs" />
+    <Compile Include="Wall\core\Chainer.cs" />
+    <Compile Include="extensions\expressions\Extensions_ExprConjunctions.cs" />
+    <Compile Include="Wall\interfaces\IViewAs.cs" />
+    <Compile Include="Wall\chainers\InsertChainer.cs" />
+    <Compile Include="Wall\chainers\UpdateChainer.cs" />
+    <Compile Include="Wall\chainers\DeleteChainer.cs" />
+    <Compile Include="Wall\chainers\HavingChainer.cs" />
+    <Compile Include="Wall\chainers\GroupByChainer.cs" />
+    <Compile Include="Wall\chainers\UnionChainer.cs" />
+    <Compile Include="Wall\chainers\TopChainer.cs" />
+    <Compile Include="Wall\chainers\OrderByChainer.cs" />
+    <Compile Include="Wall\chainers\as\ApplyAsChainer.cs" />
+    <Compile Include="Wall\chainers\CrossJoinChainer.cs" />
+    <Compile Include="Wall\chainers\FullJoinChainer.cs" />
+    <Compile Include="Wall\chainers\RightOuterJoinChainer.cs" />
+    <Compile Include="Wall\chainers\as\JoinAsChainer.cs" />
+    <Compile Include="Wall\chainers\as\FromAsChainer.cs" />
+    <Compile Include="Wall\chainers\WhereChainer.cs" />
+    <Compile Include="Wall\chainers\LeftOuterJoinChainer.cs" />
+    <Compile Include="Wall\chainers\OnChainer.cs" />
+    <Compile Include="Wall\chainers\InnerJoinChainer.cs" />
+    <Compile Include="Wall\enums\Operator.cs" />
+    <Compile Include="Value.cs" />
+    <Compile Include="extensions\Extensions_Insert.cs" />
+    <Compile Include="extensions\Extensions_Update.cs" />
+    <Compile Include="extensions\Extensions_Delete.cs" />
+    <Compile Include="Wall\common\Variable.cs" />
+    <Compile Include="extensions\Extensions_Having.cs" />
+    <Compile Include="extensions\Extensions_GroupBy.cs" />
+    <Compile Include="extensions\Extensions_Union.cs" />
+    <Compile Include="extensions\Extensions_Top.cs" />
+    <Compile Include="Wall\interfaces\IHaving.cs" />
+    <Compile Include="Wall\interfaces\IGroupBy.cs" />
+    <Compile Include="Wall\interfaces\IUnion.cs" />
+    <Compile Include="Wall\interfaces\ITop.cs" />
+    <Compile Include="View.cs" />
+    <Compile Include="extensions\Extensions_End.cs" />
+    <Compile Include="extensions\Extensions_OrderBy.cs" />
+    <Compile Include="extensions\Extensions_Where.cs" />
+    <Compile Include="extensions\Extensions_On.cs" />
+    <Compile Include="extensions\Extensions_As.cs" />
+    <Compile Include="extensions\Extensions_From.cs" />
+    <Compile Include="Wall\interfaces\IEndView.cs" />
+    <Compile Include="Wall\interfaces\IOrderBy.cs" />
+    <Compile Include="Wall\interfaces\IApplyAs.cs" />
+    <Compile Include="Wall\interfaces\ICrossJoin.cs" />
+    <Compile Include="Wall\interfaces\IFullJoin.cs" />
+    <Compile Include="Wall\interfaces\IRightOuterJoin.cs" />
+    <Compile Include="Wall\interfaces\IFromAs.cs" />
+    <Compile Include="Wall\interfaces\IWhere.cs" />
+    <Compile Include="Wall\interfaces\ILeftOuterJoin.cs" />
+    <Compile Include="Wall\interfaces\IOn.cs" />
+    <Compile Include="Wall\interfaces\IInnerJoin.cs" />
+    <Compile Include="Wall\interfaces\IJoinAs.cs" />
+    <Compile Include="Wall\chainers\SelectChainer.cs" />
+    <Compile Include="Wall\chainers\FromChainer.cs" />
+    <Compile Include="extensions\Extensions_Select.cs" />
+    <Compile Include="designer\Constructor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Wall\common\Common.cs" />
+    <Compile Include="Wall\common\Filter.cs" />
+    <Compile Include="Wall\testing\TestingForm_Execute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wall\testing\TestingForm_Show.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wall\testing\TestingForm_Parameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wall\testing\TestingForm_EventHandlers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wall\testing\TransactionCodeInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loader.gif" />
+    <None Include="Resources\restore.png" />
+    <None Include="Resources\chronometer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wall\testing\TestingFormNoTable.resx">
+      <DependentUpon>TestingFormNoTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wall\testing\TestingForm.resx">
+      <DependentUpon>TestingForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENSE.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
