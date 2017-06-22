@@ -1,4 +1,4 @@
-# library
+# QueryTalk - for a better coding experience
 <a href="http://www.querytalk.com">www.querytalk.com</a>
 <h2>Semantic data access layer</h2>
 
